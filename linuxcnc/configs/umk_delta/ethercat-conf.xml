@@ -1,6 +1,6 @@
 <masters>
   <master idx="0" appTimePeriod="1000000" refClockSyncCycles="10">
-    <slave idx="0" type="generic" vid="0x00000002" pid="0x071a2c52" configPdos="true">
+    <slave idx="0" name="EK1818" type="generic" vid="0x00000002" pid="0x071a2c52" configPdos="true">
 		<syncManager idx="2" dir="out">
 			<pdo idx="0x1600">
 				<pdoEntry idx="0x7000" subIdx="1" bitLen="1" halPin="out1" halType="bit">
@@ -56,8 +56,39 @@
 		</syncManager>
 	</slave>
 	
-    <slave idx="1" type="generic" name="D2"/>
-	<slave idx="2" type="generic" name="D3"/>
+    <slave idx="1" type="generic" name="EL3202" vid="0x00000002" pid="0x0c823052" configPdos="true">
+        <syncManager idx="3" dir="in">
+			<pdo idx="0x1a00">
+				<pdoEntry idx="0x6000" subIdx="1" bitLen="1" halPin="ch1-underrange" halType="bit">
+				</pdoEntry>
+				<pdoEntry idx="0x6000" subIdx="2" bitLen="1" halPin="ch1-overrange" halType="bit">
+				</pdoEntry>
+				<pdoEntry idx="0x6000" subIdx="17" bitLen="16" halPin="ch1-value" halType="s32">
+				</pdoEntry>
+			</pdo>
+
+			<pdo idx="0x1a01">
+				<pdoEntry idx="0x6010" subIdx="1" bitLen="1" halPin="ch2-underrange" halType="bit">
+				</pdoEntry>
+				<pdoEntry idx="0x6010" subIdx="2" bitLen="1" halPin="ch2-overrange" halType="bit">
+				</pdoEntry>
+				<pdoEntry idx="0x6010" subIdx="17" bitLen="16" halPin="ch2-value" halType="s32">
+				</pdoEntry>
+			</pdo>
+		</syncManager>
+	</slave>
+	<slave idx="2" type="generic" name="EL2502" vid="0x00000002" pid="0x09c63052" configPdos="true">
+		<syncManager idx="2" dir="out">
+			<pdo idx="0x1600">
+				<pdoEntry idx="0x7000" subIdx="17" bitLen="16" halPin="pwm-ch1-out" halType="u32">
+				</pdoEntry>
+			</pdo>
+			<pdo idx="0x1601">
+				<pdoEntry idx="0x7010" subIdx="17" bitLen="16" halPin="pwm-ch2-out" halType="u32">
+				</pdoEntry>
+			</pdo>
+		</syncManager>
+	</slave>
   </master>
 </masters>
 

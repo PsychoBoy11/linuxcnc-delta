@@ -1,16 +1,18 @@
 # Halshow settings
 # This file is generated automatically.
-wm geometry . 700x475+490+287
+wm geometry . 700x475+670+177
 placeFrames 0.3
 set ::ratio 0.3
 set ::old_w_leftf 160
 set ::watchlist {
-    pin+lcec.0.0.in1
-    pin+lcec.0.0.in2
-    pin+lcec.0.0.out1
-    pin+lcec.0.0.out2
-    pin+lcec.0.0.out3
-    pin+lcec.0.0.out4
+    pin+lcec.0.EL3202.ch1-value
+    pin+lcec.0.EL3202.ch2-value
+    pin+lcec.0.EL3202.ch1-overrange
+    pin+lcec.0.EL3202.ch1-underrange
+    pin+lcec.0.EL3202.ch2-overrange
+    pin+lcec.0.EL3202.ch2-underrange
+    pin+lcec.0.EL3202.slave-online
+    pin+lcec.0.EL3202.slave-oper
 }
 set ::workmode watchhal
 set ::watchInterval 100
