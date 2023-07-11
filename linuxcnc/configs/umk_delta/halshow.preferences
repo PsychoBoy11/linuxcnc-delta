@@ -1,6 +1,6 @@
 # Halshow settings
 # This file is generated automatically.
-wm geometry . 700x514+254+219
+wm geometry . 700x514+846+194
 placeFrames 0.4055232558139535
 set ::ratio 0.4055232558139535
 set ::old_w_leftf 160
@@ -21,8 +21,6 @@ set ::watchlist {
     pin+lcec.0.0.in-home
     pin+lcec.0.0.opmode
     pin+lcec.0.0.opmode-display
-    pin+lcec.0.0.out-1
-    pin+lcec.0.0.out-2
     pin+lcec.0.0.slave-online
     pin+lcec.0.0.slave-oper
     pin+lcec.0.0.slave-state-init
@@ -31,14 +29,13 @@ set ::watchlist {
     pin+lcec.0.0.slave-state-safeop
     pin+lcec.0.0.target-position
     pin+lcec.0.0.target-velocity
-    pin+lcec.0.2.out-1
-    pin+lcec.0.2.out-2
     pin+lcec.0.2.target-position
     pin+lcec.0.2.target-velocity
     pin+lcec.0.2.opmode
-    pin+lcec.0.2.cia-faultcode
     pin+lcec.0.2.CW-limit
     pin+cia402.0.controlword
+    pin+lcec.0.EL2502.pwm-ch1-out
+    pin+lcec.0.EL2502.pwm-ch2-out
 }
 set ::workmode watchhal
 set ::watchInterval 100

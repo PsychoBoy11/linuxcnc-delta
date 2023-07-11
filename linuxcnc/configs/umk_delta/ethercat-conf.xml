@@ -184,6 +184,26 @@
 	</slave>
 
 	<slave idx="5" type="generic" name="EL2502" vid="0x00000002" pid="0x09c63052" configPdos="true">
+		<!-- Channel 1 -->
+    <sdoConfig idx="8000" subIdx="2">
+			<sdoDataRaw data="01"/>
+		</sdoConfig>
+    <sdoConfig idx="8000" subIdx="7">
+			<sdoDataRaw data="00"/>
+		</sdoConfig>
+    <sdoConfig idx="8000" subIdx="15">
+			<sdoDataRaw data="E8 03"/>
+		</sdoConfig>
+    <!-- Channel 1 -->
+    <sdoConfig idx="8010" subIdx="2">
+			<sdoDataRaw data="01"/>
+		</sdoConfig>
+    <sdoConfig idx="8010" subIdx="7">
+			<sdoDataRaw data="00"/>
+		</sdoConfig>
+    <sdoConfig idx="8010" subIdx="15">
+			<sdoDataRaw data="F2 03"/>
+		</sdoConfig>
 		<syncManager idx="2" dir="out">
 			<pdo idx="0x1600">
 				<pdoEntry idx="0x7000" subIdx="17" bitLen="16" halPin="pwm-ch1-out" halType="u32">
