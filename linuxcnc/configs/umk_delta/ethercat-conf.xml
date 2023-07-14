@@ -2,6 +2,35 @@
   <master idx="0" appTimePeriod="1000000" refClockSyncCycles="5">
   	<!-- Joint 0 -->
     <slave idx="0" type="generic" vid="0x0000026c" pid="0x0000004e" configPdos="true">
+    <!-- Digital inputs control - Special function enable -->
+    <sdoConfig idx="3240" subIdx="1">
+      <sdoDataRaw data="0F"/>
+    </sdoConfig>
+    <!-- Digital inputs control - Input Range Select -->
+    <sdoConfig idx="3240" subIdx="6">
+      <sdoDataRaw data="0F"/>
+    </sdoConfig>
+    <!-- Digital inputs control - Routing Enable -->
+    <sdoConfig idx="3240" subIdx="8">
+      <sdoDataRaw data="01"/>
+    </sdoConfig>
+    <!-- Digital input routing -->
+    <sdoConfig idx="3242" subIdx="1">
+      <sdoDataRaw data="01"/>
+    </sdoConfig>
+    <sdoConfig idx="3242" subIdx="2">
+      <sdoDataRaw data="02"/>
+    </sdoConfig>
+    <sdoConfig idx="3242" subIdx="3">
+      <sdoDataRaw data="03"/>
+    </sdoConfig>
+    <sdoConfig idx="3242" subIdx="4">
+      <sdoDataRaw data="04"/>
+    </sdoConfig>
+    <!-- Homing method-->
+    <sdoConfig idx="6098" subIdx="0">
+      <sdoDataRaw data="04"/>
+    </sdoConfig>
     <dcConf assignActivate="300" sync0Cycle="*1" sync0Shift="0" />
       <syncManager idx="2" dir="out">
         <pdo idx="1600">
@@ -37,6 +66,35 @@
     </slave>
     <!-- Joint 1 -->
     <slave idx="1" type="generic" vid="0x0000026c" pid="0x0000004e" configPdos="true">
+    <!-- Digital inputs control - Special function enable -->
+    <sdoConfig idx="3240" subIdx="1">
+      <sdoDataRaw data="0F"/>
+    </sdoConfig>
+    <!-- Digital inputs control - Input Range Select -->
+    <sdoConfig idx="3240" subIdx="6">
+      <sdoDataRaw data="0F"/>
+    </sdoConfig>
+    <!-- Digital inputs control - Routing Enable -->
+    <sdoConfig idx="3240" subIdx="8">
+      <sdoDataRaw data="01"/>
+    </sdoConfig>
+    <!-- Digital input routing -->
+    <sdoConfig idx="3242" subIdx="1">
+      <sdoDataRaw data="01"/>
+    </sdoConfig>
+    <sdoConfig idx="3242" subIdx="2">
+      <sdoDataRaw data="02"/>
+    </sdoConfig>
+    <sdoConfig idx="3242" subIdx="3">
+      <sdoDataRaw data="03"/>
+    </sdoConfig>
+    <sdoConfig idx="3242" subIdx="4">
+      <sdoDataRaw data="04"/>
+    </sdoConfig>
+    <!-- Homing method-->
+    <sdoConfig idx="6098" subIdx="0">
+      <sdoDataRaw data="04"/>
+    </sdoConfig>
     <dcConf assignActivate="300" sync0Cycle="*1" sync0Shift="0" />
       <syncManager idx="2" dir="out">
         <pdo idx="1600">
@@ -73,29 +131,33 @@
     <!-- Joint 2 -->
     <slave idx="2" type="generic" vid="0x0000026c" pid="0x0000004e" configPdos="true">
     <!-- Digital inputs control - Special function enable -->
-    <sdoConfig idx="3240" subIdx="01">
+    <sdoConfig idx="3240" subIdx="1">
       <sdoDataRaw data="0F"/>
     </sdoConfig>
     <!-- Digital inputs control - Input Range Select -->
-    <sdoConfig idx="3240" subIdx="06">
+    <sdoConfig idx="3240" subIdx="6">
       <sdoDataRaw data="0F"/>
     </sdoConfig>
     <!-- Digital inputs control - Routing Enable -->
-    <sdoConfig idx="3240" subIdx="08">
+    <sdoConfig idx="3240" subIdx="8">
       <sdoDataRaw data="01"/>
     </sdoConfig>
     <!-- Digital input routing -->
-    <sdoConfig idx="3242" subIdx="01">
+    <sdoConfig idx="3242" subIdx="1">
       <sdoDataRaw data="01"/>
     </sdoConfig>
-    <sdoConfig idx="3242" subIdx="02">
+    <sdoConfig idx="3242" subIdx="2">
       <sdoDataRaw data="02"/>
     </sdoConfig>
-    <sdoConfig idx="3242" subIdx="03">
+    <sdoConfig idx="3242" subIdx="3">
       <sdoDataRaw data="03"/>
     </sdoConfig>
-    <sdoConfig idx="3242" subIdx="04">
+    <sdoConfig idx="3242" subIdx="4">
       <sdoDataRaw data="04"/>
+    </sdoConfig>
+    <!-- Homing method-->
+    <sdoConfig idx="6098" subIdx="0">
+      <sdoDataRaw data="14"/>
     </sdoConfig>
     <dcConf assignActivate="300" sync0Cycle="*1" sync0Shift="0" />
       <syncManager idx="2" dir="out">
