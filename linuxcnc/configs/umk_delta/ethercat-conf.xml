@@ -72,6 +72,31 @@
     </slave>
     <!-- Joint 2 -->
     <slave idx="2" type="generic" vid="0x0000026c" pid="0x0000004e" configPdos="true">
+    <!-- Digital inputs control - Special function enable -->
+    <sdoConfig idx="3240" subIdx="01">
+      <sdoDataRaw data="0F"/>
+    </sdoConfig>
+    <!-- Digital inputs control - Input Range Select -->
+    <sdoConfig idx="3240" subIdx="06">
+      <sdoDataRaw data="0F"/>
+    </sdoConfig>
+    <!-- Digital inputs control - Routing Enable -->
+    <sdoConfig idx="3240" subIdx="08">
+      <sdoDataRaw data="01"/>
+    </sdoConfig>
+    <!-- Digital input routing -->
+    <sdoConfig idx="3242" subIdx="01">
+      <sdoDataRaw data="01"/>
+    </sdoConfig>
+    <sdoConfig idx="3242" subIdx="02">
+      <sdoDataRaw data="02"/>
+    </sdoConfig>
+    <sdoConfig idx="3242" subIdx="03">
+      <sdoDataRaw data="03"/>
+    </sdoConfig>
+    <sdoConfig idx="3242" subIdx="04">
+      <sdoDataRaw data="04"/>
+    </sdoConfig>
     <dcConf assignActivate="300" sync0Cycle="*1" sync0Shift="0" />
       <syncManager idx="2" dir="out">
         <pdo idx="1600">
