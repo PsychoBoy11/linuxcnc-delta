@@ -1,34 +1,10 @@
 # Halshow settings
 # This file is generated automatically.
-wm geometry . 700x514+419+165
+wm geometry . 700x514+669+136
 placeFrames 0.4055232558139535
 set ::ratio 0.4055232558139535
 set ::old_w_leftf 160
 set ::watchlist {
-    pin+lcec.0.0.CCW-limit
-    pin+lcec.0.0.CW-limit
-    pin+lcec.0.0.actual-position
-    pin+lcec.0.0.actual-torque
-    pin+lcec.0.0.actual-velocity
-    pin+lcec.0.0.cia-controlword
-    pin+lcec.0.0.cia-statusword
-    pin+lcec.0.0.in-1
-    pin+lcec.0.0.in-2
-    pin+lcec.0.0.in-3
-    pin+lcec.0.0.in-4
-    pin+lcec.0.0.in-5
-    pin+lcec.0.0.in-6
-    pin+lcec.0.0.in-home
-    pin+lcec.0.0.opmode
-    pin+lcec.0.0.opmode-display
-    pin+lcec.0.0.slave-online
-    pin+lcec.0.0.slave-oper
-    pin+lcec.0.0.slave-state-init
-    pin+lcec.0.0.slave-state-op
-    pin+lcec.0.0.slave-state-preop
-    pin+lcec.0.0.slave-state-safeop
-    pin+lcec.0.0.target-position
-    pin+lcec.0.0.target-velocity
     pin+lcec.0.2.target-position
     pin+lcec.0.2.target-velocity
     pin+lcec.0.2.opmode
@@ -42,6 +18,30 @@ set ::watchlist {
     pin+lcec.0.2.in-2
     pin+lcec.0.2.in-3
     pin+lcec.0.2.in-4
+    pin+lcec.0.2.actual-position
+    pin+lcec.0.2.X-cmd-EnableOperation
+    pin+lcec.0.2.X-cmd-EnableVoltage
+    pin+lcec.0.2.X-cmd-FaultReset
+    pin+lcec.0.2.X-cmd-OPmodeRel1
+    pin+lcec.0.2.X-cmd-OPmodeRel2
+    pin+lcec.0.2.X-cmd-OPmodeRel3
+    pin+lcec.0.2.X-cmd-OPmodeRel4
+    pin+lcec.0.2.X-cmd-QuickStop
+    pin+lcec.0.2.X-cmd-SwitchOn
+    pin+lcec.0.2.opmode-display
+    pin+lcec.0.2.X-stat-Fault
+    pin+lcec.0.2.X-stat-Keep
+    pin+lcec.0.2.X-stat-OperationEnable
+    pin+lcec.0.2.X-stat-QuickStop
+    pin+lcec.0.2.X-stat-ReadyToSwitchOn
+    pin+lcec.0.2.X-stat-Remote
+    pin+lcec.0.2.X-stat-SwitchOn
+    pin+lcec.0.2.X-stat-SwitchOnDisable
+    pin+lcec.0.2.X-stat-TargetIsReached
+    pin+lcec.0.2.X-stat-VoltageEnabled
+    pin+lcec.0.2.X-stat-Warning
+    pin+lcec.0.2.X-stat-FollowTargetOn
+    pin+lcec.0.2.X-stat-FollowingError
 }
 set ::workmode watchhal
 set ::watchInterval 100
