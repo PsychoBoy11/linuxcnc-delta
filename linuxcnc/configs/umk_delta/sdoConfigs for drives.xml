@@ -1,4 +1,4 @@
-<!-- Digital inputs control - Special function enable -->
+    <!-- Digital inputs control - Special function enable -->
     <sdoConfig idx="3240" subIdx="1">
       <sdoDataRaw data="0F"/>
     </sdoConfig>
@@ -25,7 +25,7 @@
     </sdoConfig>
     <!-- Homing method-->
     <sdoConfig idx="6098" subIdx="0">
-      <sdoDataRaw data="04"/>
+      <sdoDataRaw data="13"/>
     </sdoConfig>
     <!-- Position scaling-->
     <sdoConfig idx="60E9" subIdx="3">
@@ -34,6 +34,10 @@
     <!-- SI unit position -->
     <sdoConfig idx="60A8" subIdx="0">
       <sdoDataRaw data="00 00 01 FA" />
+    </sdoConfig>
+    <!-- Polarity -->
+    <sdoConfig idx="607E" subIdx="0">
+      <sdoDataRaw data="00"/>
     </sdoConfig>
 
         <pdoEntry idx="6040" subIdx="00" bitLen="16" halType="complex">

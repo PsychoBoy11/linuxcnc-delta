@@ -19,29 +19,7 @@ set ::watchlist {
     pin+lcec.0.2.in-3
     pin+lcec.0.2.in-4
     pin+lcec.0.2.actual-position
-    pin+lcec.0.2.X-cmd-EnableOperation
-    pin+lcec.0.2.X-cmd-EnableVoltage
-    pin+lcec.0.2.X-cmd-FaultReset
-    pin+lcec.0.2.X-cmd-OPmodeRel1
-    pin+lcec.0.2.X-cmd-OPmodeRel2
-    pin+lcec.0.2.X-cmd-OPmodeRel3
-    pin+lcec.0.2.X-cmd-OPmodeRel4
-    pin+lcec.0.2.X-cmd-QuickStop
-    pin+lcec.0.2.X-cmd-SwitchOn
     pin+lcec.0.2.opmode-display
-    pin+lcec.0.2.X-stat-Fault
-    pin+lcec.0.2.X-stat-Keep
-    pin+lcec.0.2.X-stat-OperationEnable
-    pin+lcec.0.2.X-stat-QuickStop
-    pin+lcec.0.2.X-stat-ReadyToSwitchOn
-    pin+lcec.0.2.X-stat-Remote
-    pin+lcec.0.2.X-stat-SwitchOn
-    pin+lcec.0.2.X-stat-SwitchOnDisable
-    pin+lcec.0.2.X-stat-TargetIsReached
-    pin+lcec.0.2.X-stat-VoltageEnabled
-    pin+lcec.0.2.X-stat-Warning
-    pin+lcec.0.2.X-stat-FollowTargetOn
-    pin+lcec.0.2.X-stat-FollowingError
 }
 set ::workmode watchhal
 set ::watchInterval 100
