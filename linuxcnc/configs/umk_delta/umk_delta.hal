@@ -9,16 +9,18 @@ loadusr -W ./lcec_conf ethercat-conf.xml
 loadrt lcec
 loadrt cia402 count=3
 loadrt pid names=s-pid,0-pid,1-pid,2-pid
-# loadusr -W lineardelta MIN_JOINT=-420
-loadrt scale
-loadrt conv_s32_float
-loadrt conv_float_s32
+loadusr -W lineardelta MIN_JOINT=-420
+loadrt scale count=1
+loadrt conv_u32_float
+loadrt conv_float_u32
 
 ###########################################################
 # Functions servo-thread
 ###########################################################
 
 addf lcec.read-all servo-thread
+addf scale.0 servo-thread
+addf conv-float-u32.0 servo-thread
 addf cia402.0.read-all servo-thread
 addf cia402.1.read-all servo-thread
 addf cia402.2.read-all servo-thread
@@ -36,16 +38,17 @@ addf lcec.write-all servo-thread
 #########################################
 #nets
 #########################################
-# net L lineardeltakins.L => lineardelta.L
-# net R lineardeltakins.R => lineardelta.R
+net L lineardeltakins.L => lineardelta.L
+net R lineardeltakins.R => lineardelta.R
 
-# sets L 269
-# sets R 130.25
+sets L 269
+sets R 130.25
 
 # estop loopback
 # net estop-loop iocontrol.0.user-enable-out iocontrol.0.emc-enable-in
 net emc-enable => iocontrol.0.emc-enable-in
 sets emc-enable 1
+
 #
 # Joint 0
 #
@@ -137,3 +140,15 @@ net 2-controlword         cia402.2.controlword => lcec.0.2.cia-controlword
 net 2-modes-of-operation  cia402.2.opmode => lcec.0.2.opmode
 net 2-drv-target-pos      cia402.2.drv-target-position => lcec.0.2.target-position
 net 2-drv-target-velo     cia402.2.drv-target-velocity => lcec.0.2.target-velocity
+
+# spindle
+# 80..32657
+setp scale.0.gain 10.0
+# setp scale.0.offset 3000
+# setp spindle.0.select.0 1
+# setp spindle.0.min.0 3000
+# setp spindle.0.max.0 32657
+# setp spindle.0.offset.0 3000
+net spindle-speed-scale spindle.0.speed-out => scale.0.in
+net spindle-conv-in conv-float-u32.0.in <= scale.0.out 
+net spindle-speed-DAC conv-float-u32.0.out => lcec.0.EL2502.pwm-ch2-out
