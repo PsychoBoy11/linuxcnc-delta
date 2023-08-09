@@ -8,7 +8,7 @@ loadrt [EMCMOT]EMCMOT servo_period_nsec=[EMCMOT]SERVO_PERIOD num_joints=[KINS]JO
 loadusr -W ./lcec_conf ethercat-conf.xml
 loadrt lcec
 loadrt cia402 count=3
-loadrt pid names=s-pid,0-pid,1-pid,2-pid
+# loadrt pid names=s-pid,0-pid,1-pid,2-pid
 loadusr -W lineardelta MIN_JOINT=-420
 loadrt scale count=2
 loadrt conv_u32_float
@@ -32,10 +32,10 @@ addf logic.0 servo-thread
 
 addf motion-command-handler servo-thread
 addf motion-controller servo-thread
-addf s-pid.do-pid-calcs servo-thread
-addf 0-pid.do-pid-calcs servo-thread
-addf 1-pid.do-pid-calcs servo-thread
-addf 2-pid.do-pid-calcs servo-thread
+# addf s-pid.do-pid-calcs servo-thread
+# addf 0-pid.do-pid-calcs servo-thread
+# addf 1-pid.do-pid-calcs servo-thread
+# addf 2-pid.do-pid-calcs servo-thread
 
 #write
 addf cia402.0.write-all servo-thread
@@ -160,9 +160,21 @@ net 2-drv-target-pos      cia402.2.drv-target-position => lcec.0.2.target-positi
 net 2-drv-target-velo     cia402.2.drv-target-velocity => lcec.0.2.target-velocity
 
 # spindle
-# 80..32657 560kv*24v
-setp scale.0.gain 10.0
-setp scale.0.offset 2000
+# 80..32657 DAC PWM -> 0-5V -> 0-24V
+# 560kv*24v
+# 0.1V = +970
+
+# wej: obr/min
+# wyj: pwm
+# 8900 dz/V
+# 560 obr/V
+# 8900 dz/V / 560 obr/V = 8900 dz/V * 1/560 V/obr
+# 15.8928 
+
+setp scale.0.gain 3.311
+# setp scale.0.offset 2000
 net spindle-speed-scale spindle.0.speed-out => scale.0.in
 net spindle-conv-in conv-float-u32.0.in <= scale.0.out 
 net spindle-speed-DAC conv-float-u32.0.out => lcec.0.EL2502.pwm-ch2-out
+# net spindle-speed-DAC => lcec.0.EL2502.pwm-ch2-out
+# sets spindle-speed-DAC 3000
