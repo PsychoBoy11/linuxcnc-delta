@@ -12,6 +12,14 @@
         <pdoEntry idx="60FF" subIdx="00" bitLen="32" halPin="target-velocity" halType="s32"/>
         <pdoEntry idx="6080" subIdx="00" bitLen="32" halPin="max-speed" halType="u32"/>
       </pdo>
+      <pdo idx="1601">
+        <pdoEntry idx="3210" subIdx="01" bitLen="32" halPin="pos-Kp" halType="u32"/>
+        <pdoEntry idx="3210" subIdx="02" bitLen="32" halPin="pos-Ki" halType="u32"/>
+        <pdoEntry idx="3210" subIdx="03" bitLen="32" halPin="vel-Kp" halType="u32"/>
+        <pdoEntry idx="3210" subIdx="04" bitLen="32" halPin="vel-Ki" halType="u32"/>
+        <pdoEntry idx="3210" subIdx="07" bitLen="32" halPin="cur-Kp" halType="u32"/>
+        <pdoEntry idx="3210" subIdx="08" bitLen="32" halPin="cur-Ki" halType="u32"/>
+      </pdo>
     </syncManager>
     <syncManager idx="3" dir="in">
       <pdo idx="1a00">
@@ -50,6 +58,14 @@
         <pdoEntry idx="60FF" subIdx="00" bitLen="32" halPin="target-velocity" halType="s32"/>
         <pdoEntry idx="6080" subIdx="00" bitLen="32" halPin="max-speed" halType="u32"/>
       </pdo>
+      <pdo idx="1601">
+        <pdoEntry idx="3210" subIdx="01" bitLen="32" halPin="pos-Kp" halType="u32"/>
+        <pdoEntry idx="3210" subIdx="02" bitLen="32" halPin="pos-Ki" halType="u32"/>
+        <pdoEntry idx="3210" subIdx="03" bitLen="32" halPin="vel-Kp" halType="u32"/>
+        <pdoEntry idx="3210" subIdx="04" bitLen="32" halPin="vel-Ki" halType="u32"/>
+        <pdoEntry idx="3210" subIdx="07" bitLen="32" halPin="cur-Kp" halType="u32"/>
+        <pdoEntry idx="3210" subIdx="08" bitLen="32" halPin="cur-Ki" halType="u32"/>
+      </pdo>
     </syncManager>
     <syncManager idx="3" dir="in">
       <pdo idx="1a00">
@@ -87,6 +103,14 @@
         <pdoEntry idx="607A" subIdx="00" bitLen="32" halPin="target-position" halType="s32"/>
         <pdoEntry idx="60FF" subIdx="00" bitLen="32" halPin="target-velocity" halType="s32"/>
         <pdoEntry idx="6080" subIdx="00" bitLen="32" halPin="max-speed" halType="u32"/>
+      </pdo>
+      <pdo idx="1601">
+        <pdoEntry idx="3210" subIdx="01" bitLen="32" halPin="pos-Kp" halType="u32"/>
+        <pdoEntry idx="3210" subIdx="02" bitLen="32" halPin="pos-Ki" halType="u32"/>
+        <pdoEntry idx="3210" subIdx="03" bitLen="32" halPin="vel-Kp" halType="u32"/>
+        <pdoEntry idx="3210" subIdx="04" bitLen="32" halPin="vel-Ki" halType="u32"/>
+        <pdoEntry idx="3210" subIdx="07" bitLen="32" halPin="cur-Kp" halType="u32"/>
+        <pdoEntry idx="3210" subIdx="08" bitLen="32" halPin="cur-Ki" halType="u32"/>
       </pdo>
     </syncManager>
     <syncManager idx="3" dir="in">

@@ -67,6 +67,26 @@ net max-speed => lcec.0.2.max-speed
 sets max-speed 100
 
 
+# Nastawy
+setp lcec.0.0.pos-Kp 1000
+setp lcec.0.0.pos-Ki 0
+setp lcec.0.0.vel-Kp 10000
+setp lcec.0.0.vel-Ki 400
+setp lcec.0.0.cur-Kp 200000
+setp lcec.0.0.cur-Ki 1500
+setp lcec.0.1.pos-Kp 1000
+setp lcec.0.1.pos-Ki 0
+setp lcec.0.1.vel-Kp 10000
+setp lcec.0.1.vel-Ki 400
+setp lcec.0.1.cur-Kp 200000
+setp lcec.0.1.cur-Ki 1500
+setp lcec.0.2.pos-Kp 1000
+setp lcec.0.2.pos-Ki 0
+setp lcec.0.2.vel-Kp 10000
+setp lcec.0.2.vel-Ki 400
+setp lcec.0.2.cur-Kp 200000
+setp lcec.0.2.cur-Ki 1500
+
 #
 # Joint 0
 #
@@ -171,7 +191,8 @@ net 2-drv-target-velo     cia402.2.drv-target-velocity => lcec.0.2.target-veloci
 # 8900 dz/V / 560 obr/V = 8900 dz/V * 1/560 V/obr
 # 15.8928 
 
-setp scale.0.gain 3.311
+setp scale.0.gain 4.87612
+# setp scale.0.gain 655.35
 # setp scale.0.offset 2000
 net spindle-speed-scale spindle.0.speed-out => scale.0.in
 net spindle-conv-in conv-float-u32.0.in <= scale.0.out 
