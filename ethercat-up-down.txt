@@ -1,0 +1,4 @@
+# read
+ethercat upload --type int32 -p 2 0x3210 5 220000
+# save
+ethercat download --type int32 -p 2 0x3210 5 220000
