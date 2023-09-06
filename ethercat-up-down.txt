@@ -1,4 +1,8 @@
 # read
 ethercat upload --type int32 -p 2 0x3210 5 220000
-# save
+# write
 ethercat download --type int32 -p 2 0x3210 5 220000
+# save
+ethercat download --type int32 -p 2 0x1010 6 0x65766173
+# cofirm == 1
+ethercat upload --type int32 -p 2 0x1010 6
