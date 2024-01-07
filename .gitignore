@@ -1,5 +1,5 @@
 *.tbl
 *.var
 *.bak
-linuxcnc/configs/umk_delta/position.txt
-linuxcnc/configs/umk_delta/halshow.preferences
+position.txt
+halshow.preferences
