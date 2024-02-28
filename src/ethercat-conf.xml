@@ -29,7 +29,8 @@
         <!-- <pdoEntry idx="6064" subIdx="00" bitLen="32" halPin="actual-position" halType="float" scale="0.001"/> -->
         <pdoEntry idx="6064" subIdx="00" bitLen="32" halPin="actual-position" halType="s32"/>
         <pdoEntry idx="606C" subIdx="00" bitLen="32" halPin="actual-velocity" halType="s32"/>
-        <pdoEntry idx="6077" subIdx="00" bitLen="32" halPin="actual-torque" halType="s32"/>
+        <!-- <pdoEntry idx="6077" subIdx="00" bitLen="32" halPin="actual-torque" halType="s32"/> -->
+        <pdoEntry idx="60F4" subIdx="00" bitLen="32" halPin="following-error" halType="s32"/>
         <!-- Digtial_inputs (cia402 compatible) -->
         <pdoEntry idx="60FD" subIdx="0" bitLen="32" halType="complex">
           <complexEntry bitLen="1" halPin="in-neg-limit" halType="bit"/>
