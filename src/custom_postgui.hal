@@ -1,0 +1,3 @@
+# Include your custom_postgui HAL commands here
+# Ten plik nie zostanie nadpisany gdy uruchomisz ponownie Stepconf
+

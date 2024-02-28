@@ -1,4 +1,0 @@
-1. jądro preempt
-2. igh ethercat master (komunikacja)
-3. linuxcnc
-4. moduł linuxcnc ethercat - lcec

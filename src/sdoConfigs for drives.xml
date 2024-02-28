@@ -1,0 +1,73 @@
+    <!-- Digital inputs control - Special function enable -->
+    <sdoConfig idx="3240" subIdx="1">
+      <sdoDataRaw data="0F"/>
+    </sdoConfig>
+    <!-- Digital inputs control - Input Range Select -->
+    <sdoConfig idx="3240" subIdx="6">
+      <sdoDataRaw data="0F"/>
+    </sdoConfig>
+    <!-- Digital inputs control - Routing Enable -->
+    <sdoConfig idx="3240" subIdx="8">
+      <sdoDataRaw data="01"/>
+    </sdoConfig>
+    <!-- Digital input routing -->
+    <sdoConfig idx="3242" subIdx="1">
+      <sdoDataRaw data="01"/>
+    </sdoConfig>
+    <sdoConfig idx="3242" subIdx="2">
+      <sdoDataRaw data="02"/>
+    </sdoConfig>
+    <sdoConfig idx="3242" subIdx="3">
+      <sdoDataRaw data="03"/>
+    </sdoConfig>
+    <sdoConfig idx="3242" subIdx="4">
+      <sdoDataRaw data="04"/>
+    </sdoConfig>
+    <!-- Homing method-->
+    <sdoConfig idx="6098" subIdx="0">
+      <sdoDataRaw data="13"/>
+    </sdoConfig>
+    <!-- Position scaling-->
+    <sdoConfig idx="60E9" subIdx="3">
+      <sdoDataRaw data="B8 7A" />
+    </sdoConfig>
+    <!-- SI unit position -->
+    <sdoConfig idx="60A8" subIdx="0">
+      <sdoDataRaw data="00 00 01 FA" />
+    </sdoConfig>
+    <!-- Polarity -->
+    <sdoConfig idx="607E" subIdx="0">
+      <sdoDataRaw data="00"/>
+    </sdoConfig>
+
+        <pdoEntry idx="6040" subIdx="00" bitLen="16" halType="complex">
+          <complexEntry bitLen="1" halPin="X-cmd-SwitchOn" halType="bit"/>
+          <complexEntry bitLen="1" halPin="X-cmd-EnableVoltage" halType="bit"/>
+          <complexEntry bitLen="1" halPin="X-cmd-QuickStop" halType="bit"/>
+          <complexEntry bitLen="1" halPin="X-cmd-EnableOperation" halType="bit"/>
+          <complexEntry bitLen="1" halPin="X-cmd-OPmodeRel1" halType="bit"/>
+          <complexEntry bitLen="1" halPin="X-cmd-OPmodeRel2" halType="bit"/>
+          <complexEntry bitLen="1" halPin="X-cmd-OPmodeRel3" halType="bit"/>
+          <complexEntry bitLen="1" halPin="X-cmd-FaultReset" halType="bit"/>
+          <complexEntry bitLen="1" halPin="X-TimeOut" halType="bit"/>
+          <complexEntry bitLen="1" halPin="X-cmd-OPmodeRel4" halType="bit"/>
+          <complexEntry bitLen="6"/>
+        </pdoEntry>
+
+<pdoEntry idx="6041" subIdx="00" bitLen="16" halType="complex">
+  <complexEntry bitLen="1" halPin="X-stat-ReadyToSwitchOn" halType="bit"/>
+  <complexEntry bitLen="1" halPin="X-stat-SwitchOn" halType="bit"/>
+  <complexEntry bitLen="1" halPin="X-stat-OperationEnable" halType="bit"/>
+  <complexEntry bitLen="1" halPin="X-stat-Fault" halType="bit"/>
+  <complexEntry bitLen="1" halPin="X-stat-VoltageEnabled" halType="bit"/>
+  <complexEntry bitLen="1" halPin="X-stat-QuickStop" halType="bit"/>
+  <complexEntry bitLen="1" halPin="X-stat-SwitchOnDisable" halType="bit"/>
+  <complexEntry bitLen="1" halPin="X-stat-Warning" halType="bit"/>
+  <complexEntry bitLen="1" halPin="X-stat-Keep" halType="bit"/>
+  <complexEntry bitLen="1" halPin="X-stat-Remote" halType="bit"/>
+  <complexEntry bitLen="1" halPin="X-stat-TargetIsReached" halType="bit"/>
+  <complexEntry bitLen="1"/>
+  <complexEntry bitLen="1" halPin="X-stat-FollowTargetOn" halType="bit"/>
+  <complexEntry bitLen="1" halPin="X-stat-FollowingError" halType="bit"/>
+  <complexEntry bitLen="2"/>
+</pdoEntry>  
