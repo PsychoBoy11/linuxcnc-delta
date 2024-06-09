@@ -10,3 +10,7 @@ Required:
 - Preempt linux kernel
 - LinuxCNC-EtherCAT module: https://github.com/sittner/linuxcnc-ethercat
 - EtherCAT-CiA402 HAL module: https://github.com/dbraun1981/hal-cia402
+
+## Thesis
+This project is part of my thesis:
+[Sterowanie maszyną numeryczną w układzie Delta z wykorzystaniem oprogramowania LinuxCNC](08-I-ATM-RBT-279117.pdf)
